@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
-import 'package:skillmatrix/app_data.dart';
+import 'package:brainbrawl/app_data.dart';
 import '../../../routes/app_pages.dart';
 import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 

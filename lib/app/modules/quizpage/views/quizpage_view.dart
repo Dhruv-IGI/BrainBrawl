@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:skillmatrix/app/modules/quizpage/views/quiz_page.dart';
+import 'package:brainbrawl/app/modules/quizpage/views/quiz_page.dart';
+import 'package:sizer/sizer.dart';
 import '../controllers/quizpage_controller.dart';
 import '../../../../app_data.dart';
 
@@ -17,17 +18,20 @@ class QuizpageView extends GetView<QuizpageController> {
               )
             : Stack(
             children:[
-              Container(
-                height: double.maxFinite,
-                width: double.maxFinite,
-                // decoration: const BoxDecoration(
-                //   image: DecorationImage(
-                //     image: ExactAssetImage("assets/images/virtual.jpg"),
-                //     fit: BoxFit.fill,
-                //     alignment: Alignment.center,
-                //   ),
-                // ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.symmetric(vertical : 10.h, horizontal : 10.w),
+              //   child: Container(
+              //     height: double.maxFinite,
+              //     width: double.maxFinite,
+              //     decoration: const BoxDecoration(
+              //       image: DecorationImage(
+              //         image: ExactAssetImage("assets/images/ques_rect.png"),
+              //         fit: BoxFit.fill,
+              //         alignment: Alignment.center,
+              //       ),
+              //     ),
+              //   ),
+              // ),
               Wrap(
                   children: [
                     SizedBox(

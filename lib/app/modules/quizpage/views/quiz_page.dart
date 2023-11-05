@@ -93,16 +93,21 @@ class _QuizPageState extends State<QuizPage> {
       Padding(
         padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 10.h),
         child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.8),
-                  spreadRadius: 2,
-                  blurRadius: 4,
-                  offset: const Offset(0, 2),
-                ),
-              ]),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/ques_rect.png"),
+              fit :BoxFit.fill,
+            ),
+              // borderRadius: BorderRadius.circular(20),
+              // boxShadow: [
+              //   BoxShadow(
+              //     color: Colors.grey.withOpacity(0.8),
+              //     spreadRadius: 2,
+              //     blurRadius: 4,
+              //     offset: const Offset(0, 2),
+              //   ),
+              // ],
+          ),
           padding: const EdgeInsets.all(20),
           child:
           Obx(()
@@ -360,18 +365,23 @@ class _QuizPageState extends State<QuizPage> {
         ))
     :
       Padding(
-          padding: EdgeInsets.symmetric(horizontal: Get.width / 4, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: Get.width / 2, vertical: 5.h),
           child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ]),
+            decoration: const BoxDecoration(
+                // borderRadius: BorderRadius.circular(20),
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.grey.withOpacity(0.5),
+                //     spreadRadius: 2,
+                //     blurRadius: 4,
+                //     offset: const Offset(0, 2),
+                //   ),
+                // ],
+    image: DecorationImage(
+    image: AssetImage("assets/images/ques_rect.png"),
+    fit :BoxFit.fill,
+    ),
+            ),
             padding: const EdgeInsets.all(30),
             child:
             Obx(() {

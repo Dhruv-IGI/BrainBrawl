@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:skillmatrix/app/modules/login/views/login_view.dart';
+import 'package:brainbrawl/app/modules/login/views/login_view.dart';
 import '../../../routes/app_pages.dart';
 //import '../../login/views/login_view.dart';
 import 'package:http/http.dart' as http;
@@ -55,8 +55,8 @@ class PairController extends GetxController {
     // final prefs = await SharedPreferences.getInstance();
     // accessToken = prefs.getString('access_token_value')!;
     // print(accessToken);
-    print("http://127.0.0.1:8000/levels/$competitionId/$participantLevel");
-    final levelResponse = await http.post(Uri.parse("http://127.0.0.1:8000/levels/$competitionId/$participantLevel") , body: {});
+    print("https://hackcbs-backend.onrender.com/levels/$competitionId/$participantLevel");
+    final levelResponse = await http.post(Uri.parse("https://hackcbs-backend.onrender.com/levels/$competitionId/$participantLevel") , body: {});
     print(levelResponse.statusCode);
     if (levelResponse.statusCode == 201) {
       final json = await jsonDecode(levelResponse.body);
@@ -95,8 +95,8 @@ class PairController extends GetxController {
     // } else {
     //   participantLevel = participantLevel + 2;
     // }
-    var response = await http.post(Uri.parse('http://127.0.0.1:8000/pair/$participantLevel') , body: {});
-    response = await http.get(Uri.parse('http://127.0.0.1:8000/pair/$participantLevel'));
+    var response = await http.post(Uri.parse('https://hackcbs-backend.onrender.com/pair/$participantLevel') , body: {});
+    response = await http.get(Uri.parse('https://hackcbs-backend.onrender.com/pair/$participantLevel'));
     if (response.statusCode == 200) {
     final json = await jsonDecode(response.body);
       int playerIndex=0;
@@ -134,7 +134,7 @@ class PairController extends GetxController {
   }
 
   void getQuestions() async {
-    // final response = await http.get(Uri.parse("http://127.0.0.1:8000//questions/$participantLevel"));   //TODO: add level to link
+    // final response = await http.get(Uri.parse("https://hackcbs-backend.onrender.com//questions/$participantLevel"));   //TODO: add level to link
     // if (response.statusCode == 200) {
     //   questionData = json.decode(response.body);
     final response = await rootBundle.loadString('assets/json/abc.json');

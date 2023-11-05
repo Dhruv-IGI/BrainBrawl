@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 import 'package:get/get.dart';
 import 'package:quiver/async.dart';
-import 'package:skillmatrix/app_data.dart';
+import 'package:brainbrawl/app_data.dart';
 import '../../../routes/app_pages.dart';
 import 'package:http/http.dart' as http;
 //import '../../login/views/login_view.dart';
@@ -22,7 +22,7 @@ class LeaderBoardController extends GetxController {
       Get.offAllNamed(Routes.HOME);
     });
     final response = await http.get(
-        Uri.parse("http://127.0.0.1:8000/score/"));
+        Uri.parse("https://hackcbs-backend.onrender.com/score/"));
     responseData = json.decode(response.body.toString());
     responseData = json.decode(response.body.toString());
     if (response.statusCode == 200) {

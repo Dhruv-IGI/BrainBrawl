@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 import 'package:get/get.dart';
 import 'package:quiver/async.dart';
-import 'package:skillmatrix/app_data.dart';
+import 'package:brainbrawl/app_data.dart';
 import '../../../routes/app_pages.dart';
 //import '../../login/views/login_view.dart';
 

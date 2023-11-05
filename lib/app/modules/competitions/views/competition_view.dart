@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../app_data.dart';
@@ -660,11 +661,16 @@ class CompetitionView extends GetView<CompetitionController> {
                               // competitionDateTime[index] =
                               //   controller.competitions[index].time! as DateTime;
                               competitionName = controller.competitions[index].competition.toString();
-                             // print(competitionName);
-                              return Card(
-                                color: Colors.white,
+                              // print(competitionName);
+                              return Container(
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/images/rect.png"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                                 child: SizedBox(
-                                 // height: 150,
+                                  // height: 150,
                                   child: Padding(
                                     padding: EdgeInsets.symmetric(vertical : 1.w),
                                     child: Column(
@@ -689,7 +695,7 @@ class CompetitionView extends GetView<CompetitionController> {
                                           mainAxisAlignment:
                                           MainAxisAlignment.center,
                                           children: [
-                                             Text(
+                                            Text(
                                               "Competition will start at : ",
                                               style: TextStyle(
                                                   color: Colors.black,
@@ -768,89 +774,104 @@ class CompetitionView extends GetView<CompetitionController> {
                               //   controller.competitions[index].time! as DateTime;
                               competitionName = controller.competitions[index].competition.toString();
                               print(competitionName);
-                              return Card(
-                                color: Colors.white,
-                                child: SizedBox(
-                                  //height: 150,
-                                  child: Padding(
-                                    padding: EdgeInsets.symmetric(vertical : 2.h),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                            controller.competitions[index]
-                                                .competition
-                                                .toString(),
-                                            style: TextStyle(
-                                                fontSize: 4.w,
-                                                fontWeight:
-                                                FontWeight.bold)),
-                                        const SizedBox(
-                                          height: 20,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              "Competition will start at : ",
-                                              style: TextStyle(
-                                                  fontSize: 2.w,
-                                                  fontWeight:
-                                                  FontWeight.bold),
-                                            ),
-
-                                            Text(
-                                              controller.competitions[index].time
+                              return Padding(
+                                padding: const EdgeInsets.symmetric(vertical : 10.0),
+                                child: Container(
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("assets/images/rect.png"),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  child: SizedBox(
+                                    //height: 150,
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(vertical : 2.h),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                              controller.competitions[index]
+                                                  .competition
                                                   .toString(),
-                                              style: TextStyle(
-                                                  fontSize: 2.w,
+                                              style: GoogleFonts.spaceMono(
+                                                  fontSize: 4.w,
                                                   fontWeight:
-                                                  FontWeight.bold),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 20,
-                                        ),
-                                        ElevatedButton(
-                                          onPressed: () async {
-                                            if(DateTime.parse(controller.competitions[index].time!).isAfter(DateTime.now()) && !(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes: controller.competitions[index].roomTime!)).isBefore(DateTime.now()))){
-                                              Get.showSnackbar(const GetSnackBar(
-                                                message: "Competition not started yet",
-                                                duration: Duration(seconds: 2),
-                                              ));
-                                              return;
-                                            }
-                                            else if(DateTime.parse(controller.competitions[index].time!).isBefore(DateTime.now()) && !(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes:controller.competitions[index].roomTime!)).isBefore(DateTime.now()))) {
-                                              await controller.registerParticipant( controller.competitions[index].competitionId!) ;
-                                              controller.competitionTime(DateTime.parse(controller.competitions[index].time!) , controller.competitions[index].roomTime! );
-                                              Get.toNamed(Routes.DASHBOARD, arguments: controller.competitions[index].roomTime);
-                                              controller.onClose();
-                                              return;
-                                            }
-                                            else if(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes:controller.competitions[index].roomTime!)).isBefore(DateTime.now())){
-                                              Get.showSnackbar(const GetSnackBar(
-                                                message: "Competition has begun....",
-                                                duration: Duration(seconds: 2),
-                                              ));
-                                              return;
-                                            }
-                                          },
-                                          style: ElevatedButton
-                                              .styleFrom(
-                                              backgroundColor:
-                                              Colors.green),
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                10.0),
-                                            child: Text("Join" , style: TextStyle(fontSize: 2.w),),
+                                                  FontWeight.bold, color: Colors.white,)),
+                                          const SizedBox(
+                                            height: 20,
                                           ),
-                                        ),
-                                      ],
+                                          Row(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Competition will start at : ",
+                                                style: GoogleFonts.spaceMono(
+                                                    fontSize: 2.w,
+                                                    fontWeight:
+                                                    FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+
+                                              Text(
+                                                controller.competitions[index].time
+                                                    .toString(),
+                                                style: GoogleFonts.spaceMono(
+                                                    fontSize: 2.w,
+                                                    fontWeight:
+                                                    FontWeight.bold,
+                                                color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          ElevatedButton(
+                                            onPressed: () async {
+                                              if(DateTime.parse(controller.competitions[index].time!).isAfter(DateTime.now()) && !(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes: controller.competitions[index].roomTime!)).isBefore(DateTime.now()))){
+                                                Get.showSnackbar(const GetSnackBar(
+                                                  message: "Competition not started yet",
+                                                  duration: Duration(seconds: 2),
+                                                ));
+                                                return;
+                                              }
+                                              else if(DateTime.parse(controller.competitions[index].time!).isBefore(DateTime.now()) && !(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes:controller.competitions[index].roomTime!)).isBefore(DateTime.now()))) {
+                                                await controller.registerParticipant( controller.competitions[index].competitionId!) ;
+                                                controller.competitionTime(DateTime.parse(controller.competitions[index].time!) , controller.competitions[index].roomTime! );
+                                                Get.toNamed(Routes.DASHBOARD, arguments: controller.competitions[index].roomTime);
+                                                controller.onClose();
+                                                return;
+                                              }
+                                              else if(DateTime.parse(controller.competitions[index].time!).add(Duration(minutes:controller.competitions[index].roomTime!)).isBefore(DateTime.now())){
+                                                Get.showSnackbar(const GetSnackBar(
+                                                  message: "Competition has begun....",
+                                                  duration: Duration(seconds: 2),
+                                                ));
+                                                return;
+                                              }
+                                            },
+                                            style: ElevatedButton
+                                                .styleFrom(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(30),
+                                                ),
+                                                backgroundColor:
+                                                Colors.green),
+                                            child: Padding(
+                                              padding: const EdgeInsets.symmetric(
+                                                  vertical :10.0, horizontal : 20),
+                                              child: Text("Join" , style: GoogleFonts.spaceMono(fontSize: 2.w, color:Colors.black, fontWeight: FontWeight.bold),),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),

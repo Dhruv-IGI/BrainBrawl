@@ -12,13 +12,13 @@ class RegistrationView extends GetView<RegistrationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () => Get.offAllNamed(Routes.HOME),
-            icon: const Icon(Icons.arrow_back),
-          ),
-          title: const Text('Registration'),
-        ),
+        // appBar: AppBar(
+        //   leading: IconButton(
+        //     onPressed: () => Get.offAllNamed(Routes.HOME),
+        //     icon: const Icon(Icons.arrow_back),
+        //   ),
+        //   title: const Text('Registration'),
+        // ),
         body: MediaQuery.of(context).size.width > 600
             ?
             Row(

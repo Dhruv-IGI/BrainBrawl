@@ -6,8 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:flutterwebapp_reload_detector/flutterwebapp_reload_detector.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-//import 'package:skillmatrix/app/modules/login/views/login_view.dart';
-import 'package:skillmatrix/app/routes/app_pages.dart';
+//import 'package:brainbrawl/app/modules/login/views/login_view.dart';
+import 'package:brainbrawl/app/routes/app_pages.dart';
 import 'package:http/http.dart' as http;
 import '../../../../app_data.dart';
 import 'package:quiver/async.dart';
@@ -27,7 +27,7 @@ class QuizpageController extends GetxController {
  // late String stringResponse;
 
   // Future getQuestions() async {      // TODO: remove this method
-  //   // final response = await http.get(Uri.parse("http://127.0.0.1:8000//questions/$participantLevel"));   //TODO: add level to link
+  //   // final response = await http.get(Uri.parse("https://hackcbs-backend.onrender.com//questions/$participantLevel"));   //TODO: add level to link
   //   // if (response.statusCode == 200) {
   //   //   questionData = json.decode(response.body);
   //   final response = await rootBundle.loadString('assets/json/sql.json');
@@ -129,15 +129,15 @@ class QuizpageController extends GetxController {
   Future<void> getResults() async {
 
     // var request = await http.MultipartRequest(
-    //     'POST', Uri.parse('http://127.0.0.1:8000//score/$participantId'));
+    //     'POST', Uri.parse('https://hackcbs-backend.onrender.com//score/$participantId'));
     // request.fields.addAll({'score': score.toString()});
     // http.StreamedResponse response = await request.send();
     //stringResponse = await response.stream.bytesToString();
    print( "yaha pe hun");
-   print("http://127.0.0.1:8000/score/$participantId");
+   print("https://hackcbs-backend.onrender.com/score/$participantId");
    print("{\"Score\": ${score.toStringAsFixed(8)},}");
     var request = await http.put(
-      Uri.parse('http://127.0.0.1:8000/score/$participantId') ,
+      Uri.parse('https://hackcbs-backend.onrender.com/score/$participantId') ,
       body: {
         "Score": score.toStringAsFixed(8),
       },
@@ -147,19 +147,19 @@ class QuizpageController extends GetxController {
     print("sdasdasd");
     print(json.decode(request.body));
     print("sdasdasd");
-    if (request.statusCode == 200) {
+    if (request.statusCode == 201) {
       Timer(const Duration(seconds: 30), () async {
-        final response = await http.post(Uri.parse("http://127.0.0.1:8000/winner/$matchId"),
+        final response = await http.post(Uri.parse("https://hackcbs-backend.onrender.com/winner/$matchId"),
             body: {}
         );
 
      print("matchid$matchId");
       Timer(const Duration(seconds: 30), () async {
         final prefs = await SharedPreferences.getInstance();
-        final response = await http.get(Uri.parse("http://127.0.0.1:8000/winner/show/$matchId"));
+        final response = await http.get(Uri.parse("https://hackcbs-backend.onrender.com/winner/show/$matchId"));
         print("`````" + response.body);
         var responseData = json.decode(response.body);
-        final levelResponse = await http.post(Uri.parse("http://127.0.0.1:8000/levels/$competitionId/${participantLevel + 1}") , body: {});
+        final levelResponse = await http.post(Uri.parse("https://hackcbs-backend.onrender.com/levels/$competitionId/${participantLevel + 1}") , body: {});
         var levelResponseData = json.decode(levelResponse.body);
         print(participantLevel);
         print(levelResponseData);

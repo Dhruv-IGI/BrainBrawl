@@ -19,4 +19,4 @@ int participantLevel = 0;
 RxString round = "0".obs;
 String competitionName = 'Competition Name';
 RxBool isCompetitionWinner = false.obs;
-String baseUrl = 'http://127.0.0.1:8000//';
+String baseUrl = 'https://hackcbs-backend.onrender.com//';

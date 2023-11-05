@@ -56,9 +56,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyDpnyXjeReHpdcAWMwr7QtkHK9nYIdwrSA',
     appId: '1:213503018520:web:b1c56199ff90169912256d',
     messagingSenderId: '213503018520',
-    projectId: 'skillmatrix-f75fe',
-    authDomain: 'skillmatrix-f75fe.firebaseapp.com',
-    storageBucket: 'skillmatrix-f75fe.appspot.com',
+    projectId: 'brainbrawl-f75fe',
+    authDomain: 'brainbrawl-f75fe.firebaseapp.com',
+    storageBucket: 'brainbrawl-f75fe.appspot.com',
     measurementId: 'G-LGB6JVN9L6',
   );
 }
