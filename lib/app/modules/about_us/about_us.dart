@@ -11,7 +11,7 @@ import 'package:gradient_borders/gradient_borders.dart';
 
 String? finalToken = '';
 
-class HomeView {
+class AboutView extends StatelessWidget {
 
 
   //  void getRoute() async {
@@ -33,12 +33,142 @@ class HomeView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MediaQuery.of(context).size.width < 600
-          ? const SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+      body: MediaQuery.of(context).size.width > 600
+          ? SingleChildScrollView(
+        physics:ScrollPhysics(),
         child: Column(
           children: [
-
+            Row(children: [
+              Padding(
+                padding:
+                EdgeInsets.symmetric(horizontal: 30.0, vertical: 1.h),
+                child: Image.asset(
+                  'assets/images/brainbrawl_logo.png',
+                  width: 350,
+                  height: 80,
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal :2.w),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.REGISTRATION);
+                      },
+                      child: HoverContainer(
+                        hoverDecoration: const BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              //                   <--- left side
+                              color: Color(0xFFE86E80),
+                              width: 3.0,
+                            ),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Text(
+                            'Register',
+                            style: GoogleFonts.spaceMono(
+                              color: Colors.white,
+                              fontSize: 4.sp,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.LOGIN);
+                      },
+                      child: HoverContainer(
+                        hoverDecoration: const BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              //                   <--- left side
+                              color: Color(0xFFE86E80),
+                              width: 3.0,
+                            ),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Text(
+                            'Login',
+                            style: GoogleFonts.spaceMono(
+                              color: Colors.white,
+                              fontSize: 4.sp,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        // scrollToItem(itemKey3);
+                      },
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.to(() => AboutView());
+                        },
+                        child: HoverContainer(
+                          hoverDecoration: const BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                //                   <--- left side
+                                color: Color(0xFFE86E80),
+                                width: 3.0,
+                              ),
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Text(
+                              'About Us',
+                              style: GoogleFonts.spaceMono(
+                                color: Colors.white,
+                                fontSize: 4.sp,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
+              )
+            ]),
+              Image.asset(
+                'assets/images/a1.png',
+                width: 100.w,
+              ),
+            Image.asset(
+              'assets/images/a2.jpg',
+              width: 100.w,
+            ),
+            Image.asset(
+              'assets/images/a3.jpg',
+              width: 100.w,
+            ),
+            Image.asset(
+              'assets/images/a4.jpg',
+              width: 100.w,
+            ),
+            Image.asset(
+              'assets/images/a5.jpg',
+              width: 100.w,
+            ),
           ],
         ),
       )

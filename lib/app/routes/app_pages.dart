@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 
+import '../modules/about_us/about_us.dart';
 import '../modules/competitions/bindings/competition_bindings.dart';
 import '../modules/competitions/views/competition_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
@@ -28,7 +29,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LEADERBOARD;
+  static const INITIAL = Routes.HOME;
 
   static final routes = [
     GetPage(

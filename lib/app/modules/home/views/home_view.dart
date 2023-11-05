@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 import '../../../routes/app_pages.dart';
+import '../../about_us/about_us.dart';
 import '../controllers/home_controller.dart';
 import 'package:hovering/hovering.dart';
 import 'package:gradient_borders/gradient_borders.dart';
@@ -200,7 +201,7 @@ class HomeView extends GetView<HomeController> {
                         },
                         child: GestureDetector(
                           onTap: () {
-                            // Get.toNamed(Routes.ABOUTUS);
+                            Get.to(() => AboutView());
                           },
                           child: HoverContainer(
                             hoverDecoration: const BoxDecoration(

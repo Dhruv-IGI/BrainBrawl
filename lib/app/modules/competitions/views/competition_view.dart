@@ -637,7 +637,7 @@ class CompetitionView extends GetView<CompetitionController> {
             onPressed: () => Get.offAllNamed(Routes.LOGIN),
             icon: const Icon(Icons.arrow_back),
           ),
-          title: const Text('Competitions'),
+          title:Text('Competitions', style : GoogleFonts.spaceMono()),
         ),
         body: Obx(
               () => controller.isLoading.isFalse
@@ -882,17 +882,17 @@ class CompetitionView extends GetView<CompetitionController> {
               ),
             ),
           )
-              : const Center(
+              :  Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircularProgressIndicator(),
-                SizedBox(
+                const CircularProgressIndicator(),
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Loading Competitions",
-                  style: TextStyle(
+                  style: GoogleFonts.spaceMono(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
