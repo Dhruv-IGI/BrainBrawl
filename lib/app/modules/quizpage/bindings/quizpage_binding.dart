@@ -8,5 +8,8 @@ class QuizpageBinding extends Bindings {
     Get.lazyPut<QuizpageController>(
       () => QuizpageController(),
     );
+    // Get.put<QuizpageController>(
+    //     QuizpageController(),
+    // );
   }
 }

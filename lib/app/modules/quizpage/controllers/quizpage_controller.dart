@@ -74,9 +74,57 @@ class QuizpageController extends GetxController {
   // }
 
 
+  Future getQuestions() async {
+    // final response = await http.get(Uri.parse("https://hackcbs-backend.onrender.com//questions/$participantLevel"));   //TODO: add level to link
+    // if (response.statusCode == 200) {
+    //   questionData = json.decode(response.body);
+    final response = await rootBundle.loadString('assets/json/abc.json');
+    // print(response);
+    var responseData = json.decode(response);
+    //  print(responseData);
+
+
+    // questionData = responseData['level$participantLevel'];
+    // questionData = responseData['level1'];
+
+    //questionData = responseData['level1'];
+
+    // print(questionData);
+    //  print(questionData.isEmpty);
+    // questionData = [
+    //   {
+    //     "question_id": "8647d621-f28d-4eaf-858e-672dbb9dcc5d",
+    //     "question_text": "what is c stands for",
+    //     "choice1": "apple",
+    //     "choice2": "ball",
+    //     "choice3": "cat",
+    //     "choice4": "dog",
+    //     "correct_ans": "cat",
+    //     "level": 1
+    //   } ,
+    //   {
+    //     "question_id": "8647d621-f28d-4eaf-858e-672dbb9dcc5c",
+    //     "question_text": "what is a stands for",
+    //     "choice1": "apple",
+    //     "choice2": "ball",
+    //     "choice3": "cat",
+    //     "choice4": "dog",
+    //     "correct_ans": "apple",
+    //     "level": 1
+    //   }
+    // ];
+    // }
+    if(questionData.isEmpty) {
+      Get.showSnackbar(const GetSnackBar(
+        message: "Could not fetch data",
+      ));
+    }
+    // }
+  }
+
   @override
   Future<void> onInit() async {
-    //await getQuestions();
+    // await getQuestions();
     WebAppReloadDetector.onReload(() {
       Get.offAllNamed(Routes.HOME);
     });

@@ -41,7 +41,7 @@ class HomeView extends GetView<HomeController> {
       //     width: 300,
       //   ),
       //   title: const Text(
-      //     'Skill Matrix',
+      //     'Brain Brawl',
       //   ),
       //   centerTitle: true,
       // ),

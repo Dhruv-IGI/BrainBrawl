@@ -14,7 +14,7 @@ Future<void> main() async {
     builder : (context, orientation, deviceType) =>
         GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Skill Matrix",
+      title: "Brain Brawl",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       theme: getBlackWhiteTheme(),
