@@ -10,42 +10,43 @@ class QuizpageView extends GetView<QuizpageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(
-            () => controller.isLoading.isTrue
+        () => controller.isLoading.isTrue
             ? const SizedBox(
-          height: 100,
-          child: Center(child: CircularProgressIndicator()),
-        )
+                height: 100,
+                child: Center(child: CircularProgressIndicator()),
+              )
             : Stack(
-          children:[
-            Container(
-              height: double.maxFinite,
-              width: double.maxFinite,
-              // decoration: const BoxDecoration(
-              //   image: DecorationImage(
-              //     image: ExactAssetImage("assets/images/virtual.jpg"),
-              //     fit: BoxFit.fill,
-              //     alignment: Alignment.center,
-              //   ),
-              // ),
-            ),
-            Wrap(
-              children: [
-                SizedBox(
-                  height: Get.height,
-                  child: PageView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    controller: controller.pageController,
-                    itemCount: questionData.length ,
-                    itemBuilder: (context, index) {
-                      return QuizPage(index: index);
-                    },
+                children: [
+                  Container(
+                    height: double.maxFinite,
+                    width: double.maxFinite,
+                    // decoration: const BoxDecoration(
+                    //   image: DecorationImage(
+                    //     image: ExactAssetImage("assets/images/virtual.jpg"),
+                    //     fit: BoxFit.fill,
+                    //     alignment: Alignment.center,
+                    //   ),
+                    // ),
                   ),
-                ),
-                // const SizedBox(height: 16),
-                // const SizedBox(height: 16),
-              ],
-            ),],
-        ),
+                  Wrap(
+                    children: [
+                      SizedBox(
+                        height: Get.height,
+                        child: PageView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          controller: controller.pageController,
+                          itemCount: questionData.length,
+                          itemBuilder: (context, index) {
+                            return QuizPage(index: index);
+                          },
+                        ),
+                      ),
+                      // const SizedBox(height: 16),
+                      // const SizedBox(height: 16),
+                    ],
+                  ),
+                ],
+              ),
       ),
     );
   }

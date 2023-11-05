@@ -44,13 +44,13 @@ class DashboardView extends GetView<DashboardController> {
                       strokeWidth: 4.0,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 7.5.w),
-                    child: Image.asset(
-                      "assets/images/Knockout.png",
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.only(right: 7.5.w),
+                  //   child: Image.asset(
+                  //     "assets/images/Knockout.png",
+                  //     fit: BoxFit.cover,
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 3.h,
                   ),
@@ -65,18 +65,18 @@ class DashboardView extends GetView<DashboardController> {
                 ),
             )
             : Center(
-                child: AspectRatio(
-                  aspectRatio: 21 / 9,
-                  child: Container(
-                    height: double.maxFinite,
-                    width: double.maxFinite,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: ExactAssetImage("assets/images/Knockout.jpg"),
-                        fit: BoxFit.fill,
-                        alignment: Alignment.center,
-                      ),
-                    ),
+                // child: AspectRatio(
+                //   aspectRatio: 21 / 9,
+                //   child: Container(
+                //     height: double.maxFinite,
+                //     width: double.maxFinite,
+                //     decoration: const BoxDecoration(
+                //       image: DecorationImage(
+                //         image: ExactAssetImage("assets/images/Knockout.jpg"),
+                //         fit: BoxFit.fill,
+                //         alignment: Alignment.center,
+                //       ),
+                //     ),
                     child: ClipRRect(
                       // make sure we apply clip it properly
                       child: BackdropFilter(
@@ -122,8 +122,9 @@ class DashboardView extends GetView<DashboardController> {
                       ),
                     ),
                   ),
-                ),
-              ));
+                // ),
+              // )
+    );
     // )
     // );
   }

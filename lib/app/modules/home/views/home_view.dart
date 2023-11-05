@@ -131,7 +131,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal :2.w),
+                  padding: EdgeInsets.symmetric(horizontal :1.w),
                   child: Row(children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -335,7 +335,7 @@ class HomeView extends GetView<HomeController> {
                       child: Container(
                         // height: Get.height * 0.6,
                         child: Image.asset(
-                          'assets/images/home_image.png',
+                          'assets/images/brainbrawl_logo.png',
                           // height: 40.w,
                           width: 80.w,
                         ),
