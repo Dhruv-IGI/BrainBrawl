@@ -1,4 +1,4 @@
-name: skillmatrix
+name: brainbrawl
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
@@ -28,6 +28,8 @@ dependencies:
   sizer: ^2.0.15
   blurrycontainer: ^1.0.2
   hovering: ^1.0.4
+  google_fonts: ^6.1.0
+  gradient_borders: ^1.0.0
 
 
 dev_dependencies: 

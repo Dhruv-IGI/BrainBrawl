@@ -1,0 +1,230 @@
+{
+  "level1": [
+    {
+      "question_id": 1,
+      "question_text": "What is the format of the Master of Engineering Innovation and Entrepreneurship (MEIE) program at Toronto Metropolitan University?",
+      "choice1": "12-month full-time; 2-year part-time",
+      "choice2": "16-month full-time; 3-year part-time",
+      "choice3": "24-month full-time; 4-year part-time",
+      "choice4": "6-month full-time; 1-year part-time",
+      "correct_ans": "16-month full-time; 3-year part-time",
+      "level": 1
+    },
+    {
+      "question_id": 2,
+      "question_text": "MEIE students gain hands-on experience necessary to drive and manage innovation in existing companies or their own ventures. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 1
+    },
+    {
+      "question_id": 3,
+      "question_text": "Which phase of the lean-startup development process involves customer validation?",
+      "choice1": "Customer Discovery",
+      "choice2": "Customer Validation",
+      "choice3": "Customer Acquisition",
+      "choice4": "Market Development and Financial Planning",
+      "correct_ans": "Customer Validation",
+      "level": 1
+    },
+    {
+      "question_id": 4,
+      "question_text": "Toronto Metropolitan University offers more than 60 cutting-edge, career-oriented graduate programs. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 1
+    }
+  ],
+  "level2": [
+    {
+      "question_id": 5,
+      "question_text": "What is the core course in MEIE that focuses on finding and validating business opportunities?",
+      "choice1": "Market Development and Financial Planning",
+      "choice2": "Sustainable Entrepreneurship",
+      "choice3": "New Venture Business Strategy Plan",
+      "choice4": "Finding and Validating Business Opportunities",
+      "correct_ans": "Finding and Validating Business Opportunities",
+      "level": 2
+    },
+    {
+      "question_id": 6,
+      "question_text": "The MEIE program at Toronto Metropolitan University offers a 6-month full-time format. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "False",
+      "level": 2
+    },
+    {
+      "question_id": 7,
+      "question_text": "Which component of the MEIE program focuses on technology commercialization?",
+      "choice1": "Advanced Engineering Courses",
+      "choice2": "Practicum",
+      "choice3": "Projects",
+      "choice4": "Core Courses",
+      "correct_ans": "Projects",
+      "level": 2
+    },
+    {
+      "question_id": 8,
+      "question_text": "Toronto Metropolitan University is located in Toronto, Canada. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 2
+    }
+  ],
+  "level3": [
+    {
+      "question_id": 9,
+      "question_text": "Which of the following is NOT a practicum course in the MEIE program?",
+      "choice1": "Customer Discovery and Development",
+      "choice2": "Market Development and Financial Planning",
+      "choice3": "Customer Validation",
+      "choice4": "Customer Acquisition",
+      "correct_ans": "Market Development and Financial Planning",
+      "level": 3
+    },
+    {
+      "question_id": 10,
+      "question_text": "Toronto Metropolitan University offers more than 125 research centers, institutes, and labs. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 3
+    },
+    {
+      "question_id": 11,
+      "question_text": "What is the contact number for the Yeates School of Graduate Studies at Toronto Metropolitan University?",
+      "choice1": "416-979-5365",
+      "choice2": "1 Dundas St. West",
+      "choice3": "Toronto, ON M5B 2K3",
+      "choice4": "350 Victoria Street",
+      "correct_ans": "416-979-5365",
+      "level": 3
+    },
+    {
+      "question_id": 12,
+      "question_text": "Funding for graduate studies at Toronto Metropolitan University can come from employment contracts, scholarships, awards, and stipends. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 3
+    }
+  ],
+  "level4": [
+    {
+      "question_id": 13,
+      "question_text": "Which phase of the lean-startup development process focuses on refining projects from untested ideas into viable businesses?",
+      "choice1": "Customer Discovery",
+      "choice2": "Customer Validation",
+      "choice3": "Customer Acquisition",
+      "choice4": "Market Development and Financial Planning",
+      "correct_ans": "Customer Acquisition",
+      "level": 4
+    },
+    {
+      "question_id": 14,
+      "question_text": "Toronto Metropolitan University offers both full-time and part-time options for the MEIE program. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 4
+    },
+    {
+      "question_id": 15,
+      "question_text": "How many master's-level courses can MEIE students choose from for advanced engineering courses?",
+      "choice1": "10 courses",
+      "choice2": "20 courses",
+      "choice3": "30 courses",
+      "choice4": "40 courses",
+      "correct_ans": "20 courses",
+      "level": 4
+    },
+    {
+      "question_id": 16,
+      "question_text": "Toronto Metropolitan University has more than 100 research centers, institutes, and labs. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 4
+    }
+  ],
+  "level5": [
+    {
+      "question_id": 17,
+      "question_text": "Which core MEIE course focuses on New Venture Business Strategy Plan?",
+      "choice1": "Finding and Validating Business Opportunities",
+      "choice2": "Market Development and Financial Planning",
+      "choice3": "New Venture Business Strategy Plan",
+      "choice4": "Sustainable Entrepreneurship",
+      "correct_ans": "New Venture Business Strategy Plan",
+      "level": 5
+    },
+    {
+      "question_id": 18,
+      "question_text": "Toronto Metropolitan University offers funding only through employment contracts for graduate students. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "False",
+      "level": 5
+    },
+    {
+      "question_id": 19,
+      "question_text": "Which level of courses does MEIE offer in Technology Commercialization project?",
+      "choice1": "One-semester project",
+      "choice2": "Two-semester project",
+      "choice3": "Three-semester project",
+      "choice4": "Four-semester project",
+      "correct_ans": "Two-semester project",
+      "level": 5
+    },
+    {
+      "question_id": 20,
+      "question_text": "Toronto Metropolitan University has more than 100 research centers, institutes, and labs. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 5
+    }
+  ],
+  "level6": [
+    {
+      "question_id": 21,
+      "question_text": "What is the location of Toronto Metropolitan University?",
+      "choice1": "350 Victoria Street, Toronto, ON M5B 2K3",
+      "choice2": "1 Dundas Street West, Toronto, ON M5G 2L5",
+      "choice3": "416-979-5000",
+      "choice4": "Toronto Metropolitan University, Canada",
+      "correct_ans": "350 Victoria Street, Toronto, ON M5B 2K3",
+      "level": 6
+    },
+    {
+      "question_id": 22,
+      "question_text": "MEIE students are required to complete a two-semester Go-to-Market project. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 6
+    },
+    {
+      "question_id": 23,
+      "question_text": "What degree is earned upon completing the MEIE program at Toronto Metropolitan University?",
+      "choice1": "Master of Science (MS)",
+      "choice2": "Master of Business Administration (MBA)",
+      "choice3": "Master of Engineering Innovation and Entrepreneurship (MEIE)",
+      "choice4": "Master of Arts (MA)",
+      "correct_ans": "Master of Engineering Innovation and Entrepreneurship (MEIE)",
+      "level": 6
+    },
+    {
+      "question_id": 24,
+      "question_text": "MEIE students gain hands-on experience necessary to drive and manage innovation in existing companies or their own ventures. (True/False)",
+      "choice1": "True",
+      "choice2": "False",
+      "correct_ans": "True",
+      "level": 6
+    }
+  ]
+}
