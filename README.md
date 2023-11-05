@@ -18,6 +18,7 @@ We provide a 1-on-1 learning experience in knockout series form, whereas, when y
 Upon logging in, users will be directed to a webpage displaying all currently active competitions. Participating in a knockout competition entails being paired with a student from another university who has also enrolled under the same subject. Subsequently, both participants engage in a timed battle, answering assessments within 30-45 seconds. Success in this competition necessitates a blend of accuracy and speed. As participants progress, winners ascend on the leaderboard until ultimately, a single winner emerges among all the universities involved in the knockout competition.
 
 ## Backend Repository Link : https://github.com/karan-17/Brain-Brawl-Backend/blob/main/README.md
+### Project PPT Link : https://www.canva.com/design/DAFzOcRR3Fc/4HsyCJ5oXb7JRiyoBEooXQ/edit?utm_content=DAFzOcRR3Fc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 
