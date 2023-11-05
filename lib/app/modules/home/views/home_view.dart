@@ -335,7 +335,7 @@ class HomeView extends GetView<HomeController> {
                       child: Container(
                         // height: Get.height * 0.6,
                         child: Image.asset(
-                          'assets/images/brainbrawl_logo.png',
+                          'assets/images/logo.png',
                           // height: 40.w,
                           width: 80.w,
                         ),
